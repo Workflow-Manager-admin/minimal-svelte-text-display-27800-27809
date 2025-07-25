@@ -1,59 +1,30 @@
-<script lang="ts">
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcomeFallback from '$lib/images/svelte-welcome.png';
+<!-- Minimal Svelte app: displays one line of centered text in a simple, light theme -->
+
+<script>
+	// No JS needed for this minimal page
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
-
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcomeFallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+<main>
+	<p class="center-text">
+		Hello, this is a minimal Svelte app.
+	</p>
+</main>
 
 <style>
-	section {
+	main {
+		height: 100vh;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
 		align-items: center;
-		flex: 0.6;
+		justify-content: center;
+		background: #f9fafb;
+		margin: 0;
 	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	.center-text {
+		font-size: 1.5rem;
+		color: #222;
+		text-align: center;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 400;
+		letter-spacing: 0.02em;
 	}
 </style>
